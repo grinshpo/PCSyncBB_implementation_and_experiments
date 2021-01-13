@@ -4,5 +4,6 @@
 **/.settings/**
 *.class
 *.h2
+*.db
 *.csv
 /bin/

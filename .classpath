@@ -6,7 +6,7 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="src" path="src"/>
-	<classpathentry kind="lib" path="C:/Users/Tal Grinshpoun/eclipse-workspace/.az/lib/AZAPI.jar" sourcepath="C:/workspace/.az/lib/AZAPI-sources.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Tal Grinshpoun/eclipse-workspace/.az/lib/AZCoreImpl.jar"/>
+	<classpathentry kind="lib" path="../.az/lib/AZAPI.jar" sourcepath="../.az/lib/AZAPI-sources.jar"/>
+	<classpathentry kind="lib" path="../.az/lib/AZCoreImpl.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
