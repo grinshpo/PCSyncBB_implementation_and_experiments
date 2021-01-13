@@ -1,0 +1,73 @@
+<experiment>
+ <!-- Just a warmup, to keep the processors running before the real experiments -->
+	<async-test name="Warmup"  seed="0" repeat-count="100" run-var="p2" start="0.1" end="0.31" tick-size="0.1">
+        <algorithm name="PSyncBB"/>
+        <dcop-unstructured n="5" d="5" max-cost="100" p1="0.4"/>
+        <default-tester/>
+    </async-test>    
+ 
+ <!-- New experiments for AIJ   -->   
+     <async-test name="DCOPsmall"  seed="1" repeat-count="50" run-var="p1" start="0.3" end="0.91" tick-size="0.1">
+        <algorithm name="SyncBB"/>
+        <algorithm name="PSyncBB"/>
+        <algorithm name="PCSyncBB"/>
+        <dcop-unstructured-f n="7" d="6" max-cost="100" />
+        <msgc-sc />
+        <ncr-sc/>
+  	    <ctr1-sc/>
+        <ctr2-sc/>
+        <ctr3-sc/>   
+     </async-test>  
+        
+	<async-test name="DCOP-sparse"  seed="1" repeat-count="50" run-var="n" start="5" end="9" tick-size="1">
+        <algorithm name="SyncBB"/>
+        <algorithm name="PSyncBB"/>
+        <algorithm name="PCSyncBB"/>
+        <dcop-unstructured-f d="6" p1="0.3" max-cost="100" />
+        <msgc-sc />
+        <ncr-sc/>
+  	    <ctr1-sc/>
+        <ctr2-sc/>
+        <ctr3-sc/>   	
+    </async-test>
+
+    <async-test name="GC-size"  seed="1" repeat-count="50" run-var="n" start="5" end="19" tick-size="1">
+        <algorithm name="SyncBB"/>
+        <algorithm name="PSyncBB"/>
+        <algorithm name="PCSyncBB"/>
+        <gc-costs-dcop d="3" p1="0.4" max-cost="100" />
+        <msgc-sc />
+        <ncr-sc/>
+  	    <ctr1-sc/>
+        <ctr2-sc/>
+        <ctr3-sc/>   	
+    </async-test>	
+    
+    <async-test name="SF"  seed="1" repeat-count="50" run-var="n" start="7" end="13" tick-size="1">
+        <algorithm name="SyncBB"/>
+        <algorithm name="PSyncBB"/>
+        <algorithm name="PCSyncBB"/>
+    	<sf-dcop d="5" m0="4" ep="1" m="2" max-cost="100" />
+        <msgc-sc />
+        <ncr-sc/>
+  	    <ctr1-sc/>
+        <ctr2-sc/>
+        <ctr3-sc/>   	
+    </async-test>     
+
+<!-- Change code of PCSyncBB lines 77-85 before running MS experiments   --> 
+<!-- 
+    <async-test name="MS"  seed="1" repeat-count="50" run-var="m" start="3" end="9" tick-size="1">
+        <algorithm name="SyncBB"/>
+        <algorithm name="PSyncBB"/>
+        <algorithm name="PCSyncBB"/>
+        <peav-meeting-scheduling n="3" m="1" t="8" part-gen-type="ATTENDANCE" conflict-cost-type = "MIN_IMPORTANCE" min-attendance="2" attendance-range="1" min-travel-time="0" travel-time-range="1" time-cost-range="4" min-meeting-importance="5" meeting-importance-range="5"/>
+        <msgc-sc />
+        <ncr-sc/>
+  	    <ctr1-sc/>
+        <ctr2-sc/>
+        <ctr3-sc/>   
+    </async-test>     
+-->        
+       
+</experiment>
